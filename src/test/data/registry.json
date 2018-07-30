@@ -1,0 +1,46 @@
+{
+  "objects": [
+    {
+      "id": 1,
+      "movable": 1,
+      "removable": 1,
+      "type": "farm",
+      "attributes": {
+        "area": 100,
+        "seeds": "corn",
+        "cycle_time": 60,
+        "resource_amount": 100
+      }
+    },
+    {
+      "id": 2,
+      "movable": 0,
+      "removable": 1,
+      "type": "mill",
+      "attributes": {
+        "workers": 1,
+        "cycle": 60,
+        "resource_amount": 100
+      }
+    },
+    {
+      "id": 3,
+      "movable": 1,
+      "removable": 1,
+      "type": "storehouse",
+      "attributes": {
+        "capacity": 100,
+        "amount": 50
+      }
+    },
+    {
+      "id": 4,
+      "movable": 1,
+      "removable": 1,
+      "type": "decoration",
+      "attributes": {
+        "subtype": "rock"
+      }
+    }
+  ]
+}

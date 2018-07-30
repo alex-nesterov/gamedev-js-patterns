@@ -1,0 +1,37 @@
+{
+  "name": "oop-patterns-example",
+  "version": "0.0.1",
+  "description": "example of oop patterns in gamedev",
+  "main": "app.js",
+  "scripts": {
+    "compile": "tsc",
+    "test": "jest",
+    "tsversion": "echo 'typescript: '  $(tsc --version); echo 'nodejs Version: '  $(node --version)",
+    "lint": "tslint src/**/*.ts",
+    "fix": "tslint --fix src/**/*.ts",
+    "profile": "node --prof --log-timer-events dist/server.js",
+    "watch": "tsc --watch",
+    "tests": "mocha -r ts-node/register src/test/*.ts"
+  },
+  "keywords": [
+    "oop",
+    "gamedev",
+    "ts",
+    "js",
+    "pattern"
+  ],
+  "author": "Alex Nesterov",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/dotenv": "^4.0.1",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^8.0.28",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "ts-node": "^7.0.0",
+    "tslint": "5.0.0",
+    "tslint-eslint-rules": "^4.1.1",
+    "typescript": "^2.8.1"
+  }
+}
