@@ -1,7 +1,6 @@
 import GameObject from "./game-object";
 
-export default class Mill extends GameObject
-{
+export default class Mill extends GameObject {
     public workers: number;
     public cycle: number;
     public resourceAmount: number;

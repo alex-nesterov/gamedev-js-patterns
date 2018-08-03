@@ -25,7 +25,7 @@ export default class Storehouse extends GameObject {
 
     public import(amount: number) {
         if (!this.isEnoughFreeSpace(amount)) {
-            throw new Error('Not enough free space');
+            throw new Error("Not enough free space");
         }
         this.amount += amount;
     }

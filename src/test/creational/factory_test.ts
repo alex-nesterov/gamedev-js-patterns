@@ -1,18 +1,19 @@
-import {expect} from "chai";
-import Farm from "../../objects/farm";
-import Mill from "../../objects/mill";
-import Storehouse from "../../objects/storehouse";
-import ObjectFactory from "../../object-factory";
-import Registry from "../../registry";
+import { expect } from "chai";
 import * as path from "path";
+import Farm from "../../registry/objects/farm";
+import Mill from "../../registry/objects/mill";
+import ObjectFactory from "../../registry/objects/object-factory";
+import Storehouse from "../../registry/objects/storehouse";
+import Registry from "../../registry/registry";
 
-let data = require(path.join(__dirname, '/../', 'data', 'registry.json'));
-let registry = Registry.create(data);
+Registry.clear();
+const data = require(path.join(__dirname, "/../", "data", "registry.json"));
+const registry = Registry.create(data);
 
 describe("test farm", () => {
     const FARM_ID = 1;
-    let farmData = registry.objects[FARM_ID];
-    let farmObject = ObjectFactory.create(farmData) as Farm;
+    const farmData = registry.objects[FARM_ID];
+    const farmObject = ObjectFactory.create(farmData) as Farm;
 
     it("should create farm object", () => {
         expect(farmObject).to.be.instanceOf(Farm);
@@ -26,9 +27,8 @@ describe("test farm", () => {
 
 describe("test mill", () => {
     const MILL_ID = 2;
-    let millData = registry.objects[MILL_ID];
-    let millObject = ObjectFactory.create(millData) as Mill;
-
+    const millData = registry.objects[MILL_ID];
+    const millObject = ObjectFactory.create(millData) as Mill;
 
     it("should create mill object", () => {
         expect(millObject).to.be.instanceOf(Mill);
@@ -41,8 +41,8 @@ describe("test mill", () => {
 
 describe("test storehouse", () => {
     const STOREHOUSE_ID = 3;
-    let storehouseData = registry.objects[STOREHOUSE_ID];
-    let storehouseObject = ObjectFactory.create(storehouseData) as Storehouse;
+    const storehouseData = registry.objects[STOREHOUSE_ID];
+    const storehouseObject = ObjectFactory.create(storehouseData) as Storehouse;
 
     it("should create storehouse object", () => {
         expect(storehouseObject).to.be.instanceOf(Storehouse);

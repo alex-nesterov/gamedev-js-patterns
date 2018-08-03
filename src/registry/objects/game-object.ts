@@ -17,7 +17,7 @@ export default abstract class GameObject {
         this.removable = !!data.removable;
         this.setAttributes(data.attributes);
     }
-    
+
     public move(x: number, y: number) {
         if (!this.isMovable()) {
             throw new Error("this object not movable");

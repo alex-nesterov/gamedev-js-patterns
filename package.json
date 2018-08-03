@@ -5,13 +5,10 @@
   "main": "app.js",
   "scripts": {
     "compile": "tsc",
-    "test": "jest",
-    "tsversion": "echo 'typescript: '  $(tsc --version); echo 'nodejs Version: '  $(node --version)",
     "lint": "tslint src/**/*.ts",
     "fix": "tslint --fix src/**/*.ts",
-    "profile": "node --prof --log-timer-events dist/server.js",
     "watch": "tsc --watch",
-    "tests": "mocha -r ts-node/register src/test/*.ts"
+    "test": "mocha -r ts-node/register src/test/**/*.ts"
   },
   "keywords": [
     "oop",

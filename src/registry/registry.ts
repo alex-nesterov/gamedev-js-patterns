@@ -1,5 +1,5 @@
 import GameObject from "./objects/game-object";
-import ObjectFactory from "./object-factory";
+import ObjectFactory from "./objects/object-factory";
 
 export default class Registry {
 
@@ -33,5 +33,9 @@ export default class Registry {
             throw new Error(`Registry is initialized`);
         }
         return Registry.instance = new Registry(data);
+    }
+
+    public static clear() {
+        delete Registry.instance;
     }
 }
